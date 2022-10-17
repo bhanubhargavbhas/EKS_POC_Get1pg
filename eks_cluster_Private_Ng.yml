@@ -17,7 +17,7 @@ nodeGroups:
       withAddonPolicies:
         autoScaler: true
         ebs: true
-    desiredCapacity: 1
+    desiredCapacity: 2
     minSize: 1
     maxSize: 2
     volumeSize: 50
