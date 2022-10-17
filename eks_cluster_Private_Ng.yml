@@ -3,7 +3,7 @@ kind: ClusterConfig
 
 metadata:
   name: private-cluster
-  region: us-west-1
+  region: ap-south-1
 
 privateCluster:
   enabled: true
@@ -23,4 +23,4 @@ nodeGroups:
     volumeSize: 50
     labels: { role: workers }
     privateNetworking: true
-    availabilityZones: ["us-west-1c", "us-west-1b"]
+    availabilityZones: ["ap-south-1a", "ap-south-1b"]
