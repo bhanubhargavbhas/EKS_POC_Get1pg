@@ -9,17 +9,24 @@ privateCluster:
   enabled: true
   additionalEndpointServices:
   - "autoscaling"
+# vpc:
+#   private:
+#     ap-south-1a:
+#       id: subnet-asxcczxxxcxcxz
+#   public:
+#     ap-south-1c:
+# nategateway : Single # HiglyAvailable,Disable
 
 nodeGroups:
   - name: ng-1
-    instanceType: m5.large
+    instanceType: t2.micro
     iam:
       withAddonPolicies:
         autoScaler: true
         ebs: true
     desiredCapacity: 2
     minSize: 1
-    maxSize: 2
+    maxSize: 3
     volumeSize: 50
     labels: { role: workers }
     privateNetworking: true
